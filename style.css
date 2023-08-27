@@ -1,0 +1,129 @@
+@font-face {
+    font-family: mulish;
+    src: url(/fonts/Mulish-Regular.ttf);
+}
+
+@font-face {
+    font-family: cat;
+    src: url(/fonts/CATLinz_1.8.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*header styles starts*/
+
+.header {
+    padding: 30px 10.8% 0px;
+    background-color: #EFE8DE;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E6D1BF;
+}
+
+.header__logo {
+    color: #BB865F;
+    font-size: 24px;
+    font-family: mulish;
+}
+
+.header__navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header__navbar a {
+    font-family: mulish;
+    font-size: 18px;
+    margin-left: 30px;
+    text-decoration: none;
+    color: #232323;
+}
+
+/*header styles ends*/
+
+/*info styles starts*/
+
+.info {
+    background-color: #EFE8DE;
+    padding: 100px 0 0 10.8%;
+
+}
+
+.info__content {
+    display: flex;
+}
+
+.info__photo img {
+    border-radius: 250px 0px 250px 0px;
+    box-shadow: 24px -24px #E6D1BF;
+}
+
+.info__text {
+    padding-top: 84px;
+    padding: 46px 6.67% 0;
+}
+
+.info__header {
+    color: #BB865F;
+    margin-bottom: 40px;
+}
+
+.info__header p:nth-child(1) {
+    font-family: mulish;
+    font-size: 18px;
+}
+
+.info__header p:nth-child(2) {
+    font-family: cat;
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+.info__about-list {
+    margin-bottom: 60px;
+}
+
+.info__about-list ul {
+    list-style-type: none;
+    padding-left: 25px;
+}
+
+.info__about-list ul li {
+    position: relative;
+    font-family: mulish;
+    font-size: 18x;
+    margin-bottom: 30px;
+    max-width: 360px;
+}
+
+.info__about-list ul li::before {
+    content: url(/img/list__diamond-symbol-img.svg);
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+
+.info__button{
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #F4F4F4;
+    background-color: #BB865F;
+    border: none;
+    font-size: 24px;
+    border-radius: 0 40px 0 40px;
+    padding: 20px 72.5px;
+}
+
+.info__button:hover{
+    transition: .3s;
+    background-color: #DBAA85;
+}
