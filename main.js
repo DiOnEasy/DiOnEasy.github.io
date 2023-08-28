@@ -35,7 +35,7 @@ readMoreButton.onclick = () => {
 //-------------------------------
 
 //faq list code
-
+ 
 const faqItems = document.querySelectorAll('.faq__item');
 
 faqItems.forEach(item => {
