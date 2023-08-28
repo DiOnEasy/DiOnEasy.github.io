@@ -1,32 +1,42 @@
-// education list show/hide code
+//header toogle menu code
 
-let educationListItem = document.querySelectorAll('.education__list-item')
-let readMoreButton = document.querySelector('#educationReadMore')
+const navbarToggle = document.querySelector('#headerMenuToggle');
+const navbar = document.querySelector('.header__navbar');
+const navbarLinks = document.querySelectorAll('.header__navbar a')
 
-function changeListItemDisplay() {
-    for (i = 6; i < educationListItem.length; i++) {
-        if (educationListItem[i].style.display !== 'none') {
-            educationListItem[i].style.display = 'none';
-            readMoreButton.innerHTML = "Читать далее"
-        }
-        else {
-            educationListItem[i].style.display = '';
-            readMoreButton.innerHTML = "Свернуть"
+navbarToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+    navbarToggle.classList.toggle('active');
+});
+
+navbarLinks.forEach(link => {
+    link.onclick = () => {
+        if (window.innerWidth <= 768) {
+            navbar.classList.toggle('active');
+            navbarToggle.classList.toggle('active');
         }
     }
-}
-changeListItemDisplay()
-
-readMoreButton.onclick = (() => {
-    changeListItemDisplay();
 })
+
+// education list show/hide code
+
+const educationList = document.querySelector('.education__list')
+const readMoreButton = document.querySelector('#educationReadMore')
+
+readMoreButton.onclick = () => {
+    educationList.classList.toggle('shown')
+    if (educationList.classList.contains('shown')) {
+        readMoreButton.textContent = 'Свернуть'
+    } else {
+        readMoreButton.textContent = 'Читать далее'
+    }
+}
 
 //-------------------------------
 
 //faq list code
 
 const faqItems = document.querySelectorAll('.faq__item');
-
 
 faqItems.forEach(item => {
     const question = item.querySelector('.faq__title');
@@ -51,8 +61,17 @@ faqItems.forEach(item => {
 
 //-------------------------------------
 
+// about-me code
 
+const aboutMeTextContainer = document.querySelector('.about-me__text');
+const aboutMeToggleButton = document.querySelector('#aboutMeReadMore');
 
-
-
+aboutMeToggleButton.onclick = () => {
+    aboutMeTextContainer.classList.toggle('shown')
+    if (aboutMeTextContainer.classList.contains('shown')) {
+        aboutMeToggleButton.textContent = 'Свернуть'
+    } else {
+        aboutMeToggleButton.textContent = 'Читать далее'
+    }
+}
 

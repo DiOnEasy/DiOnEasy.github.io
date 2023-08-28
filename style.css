@@ -12,11 +12,13 @@
 
 body {
     overflow-x: hidden;
+    color: #232323;
 }
 
 * {
     margin: 0;
     padding: 0;
+    font-size: 18px;
 }
 
 /*header styles starts*/
@@ -46,10 +48,14 @@ body {
 
 .header__navbar a {
     font-family: mulish;
-    font-size: 18px;
     margin-left: 30px;
     text-decoration: none;
     color: #232323;
+}
+
+.header__menu-toggle{
+    display: none;
+    cursor: pointer;
 }
 
 /*header styles ends*/
@@ -86,7 +92,6 @@ body {
 
 .info__header p:nth-child(1) {
     font-family: mulish;
-    font-size: 18px;
 }
 
 .info__header p:nth-child(2) {
@@ -256,7 +261,6 @@ body {
 
 .about-me__text p {
     font-family: mulish;
-    font-size: 18px;
     margin-bottom: 20px;
 }
 
@@ -280,6 +284,12 @@ body {
 
 }
 
+.about-me__read-more{
+    font-family: mulish;
+    display: none;
+    text-decoration: underline;
+}
+
 /*about-me styles ends*/
 
 /*education styles starts*/
@@ -289,14 +299,15 @@ body {
     position: relative;
 }
 
-.education__header {
+
+
+.education__header p{
     position: relative;
     margin-bottom: 80px;
     color: #BB865F;
     font-size: 60px;
     font-family: cat;
-    text-transform: uppercase;
-}
+    text-transform: uppercase;}
 
 .education__content {
     display: flex;
@@ -319,6 +330,14 @@ body {
 .education__list {
     margin-left: 6%;
     font-family: mulish;
+}
+
+.education__list ol li:nth-child(n+7){
+    display: none;
+}
+
+.education__list.shown ol li{
+    display: list-item;
 }
 
 .education__read-more {
@@ -381,7 +400,9 @@ body {
     background-color: #EFE8DE;
 }
 
-.consultation__header {
+
+
+.consultation__header p {
     font-family: cat;
     font-size: 60px;
     text-transform: uppercase;
@@ -472,9 +493,10 @@ body {
     display: flex;
     justify-content: space-between;
     position: relative;
+    align-items: flex-start;
 }
 
-.faq__header {
+.faq__header p{
     font-size: 60px;
     font-family: cat;
     color: #BB865F;
@@ -492,7 +514,6 @@ body {
 }
 
 .faq__questions {
-    font-size: 18px;
     font-family: mulish;
 }
 
@@ -581,7 +602,6 @@ body {
 }
 
 .footer__title {
-    font-size: 18px;
     font-family: mulish;
     padding-top: 20px;
 }
@@ -594,7 +614,6 @@ body {
 
 .footer__navbar a {
     color: #232323;
-    font-size: 18px;
     font-family: mulish;
     text-decoration: none;
     margin-bottom: 10px;
@@ -608,9 +627,7 @@ body {
 
 .footer__contacts p {
     margin-top: 10px;
-    font-size: 18px;
     font-family: mulish;
-    color: #232323;
 }
 
 .footer__contacts p:nth-child(3) {

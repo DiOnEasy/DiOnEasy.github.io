@@ -1,0 +1,339 @@
+@media (max-width: 1024px) {
+
+    .header,
+    .info,
+    .working-with,
+    .about-me,
+    .education,
+    .consultation,
+    .faq,
+    .footer {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .info__photo img {
+        width: 350px;
+    }
+
+    .info__header p:nth-child(2) {
+        font-size: 50px;
+    }
+
+    .info__content {
+        padding-bottom: 25px;
+    }
+
+    .working-with__wave-back svg,
+    .about-me__wave-back svg,
+    .faq__wave-back svg {
+        height: 100px;
+    }
+
+    .working-with__photo img {
+        width: 300px;
+    }
+
+    .about-me__photo img {
+        width: 300px;
+    }
+
+    .about-me__header {
+        text-align: right;
+        font-family: cat;
+        font-size: 60px;
+        color: #BB865F;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    .faq__photo img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__content {
+        position: relative;
+    }
+
+    .header__navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #EFE8DE;
+        width: 100%;
+        z-index: 3;
+        align-items: flex-start;
+        top: 60px;
+        height: 100vh;
+    }
+
+    .header__navbar a {
+        margin: 0 0 15px 0;
+    }
+
+    .header__navbar.active {
+        animation: show 1s;
+        display: flex;
+    }
+
+    @keyframes show {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .header__menu-toggle {
+        display: block;
+    }
+
+    .header__menu-bar {
+        display: block;
+        width: 24px;
+        height: 3px;
+        background-color: #BB865F;
+        margin: 5px auto;
+        transition: 0.4s;
+    }
+
+    .header__menu-toggle.active .header__menu-bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        background-color: #828282;
+    }
+
+    .header__menu-toggle.active .header__menu-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .header__menu-toggle.active .header__menu-bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+        background-color: #828282;
+    }
+
+    .info__content {
+        display: block;
+        text-align: center;
+    }
+
+    .info__about-list ul li {
+        margin: 0 auto 15px;
+    }
+
+    .info__button {
+        padding: 17px 38px;
+    }
+
+    .working-with__header p,
+    .about-me__header,
+    .education__header p,
+    .consultation__header p,
+    .faq__header p {
+        font-size: 40px;
+    }
+
+    .working-with__header {
+        text-align: left;
+    }
+
+    .working-with__content {
+        flex-direction: column;
+    }
+
+    .working-with__photo {
+        order: 1;
+    }
+
+    .working-with__content .working-with__list:nth-child(1),
+    .working-with__content .working-with__list:nth-child(3) {
+        order: 2;
+        margin: 0;
+    }
+
+    .working-with__content .working-with__list:nth-child(1) {
+        margin-top: 46px;
+    }
+
+    .working-with__list ul li {
+        margin-bottom: 15px;
+    }
+
+    .about-me__header {
+        text-align: left;
+    }
+
+    .about-me__content {
+        flex-direction: column;
+    }
+
+    .about-me__text p:nth-child(n+5) {
+        display: none;
+    }
+
+    .about-me__text p:last-child {
+        display: block;
+    }
+
+    .about-me__text p:nth-child(4)::after {
+        content: "..";
+        display: inline;
+    }
+
+    .about-me__text.shown p:nth-child(4)::after {
+        content: "";
+    }
+
+    .about-me__text.shown p {
+        display: block;
+    }
+
+    .about-me__photo {
+        transform: scale(-1, 1);
+    }
+
+    .education__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education__images {
+        margin-bottom: 30px;
+    }
+
+    .consultation__content {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .consultation__photo {
+        margin-bottom: 30px;
+    }
+
+    .faq {
+        display: block;
+    }
+
+    .faq__header p {
+        margin-bottom: 30px;
+    }
+
+    .faq__content {
+        width: auto;
+    }
+
+    .faq__photo {
+        display: none;
+    }
+
+    .faq__button {
+        margin-top: 30px;
+        padding: 17px 24px;
+    }
+
+    .footer__info {
+        flex-direction: column;
+    }
+
+    .footer__navbar div {
+        margin-top: 20px;
+    }
+
+    .footer__contacts {
+        text-align: left;
+    }
+
+    .footer__media {
+        flex-direction: column;
+    }
+
+    .footer__social {
+        order: 1;
+    }
+
+    .footer__rights {
+        order: 2;
+        text-align: center;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        font-size: 16px;
+    }
+    .working-with__header p,
+    .about-me__header,
+    .education__header p,
+    .consultation__header p,
+    .faq__header p {
+        font-size: 30px;
+    }
+
+    .working-with__wave-back svg,
+    .about-me__wave-back svg,
+    .education__wave-back svg,
+    .education__wave-back_bottom svg,
+    .faq__wave-back svg,
+    .footer__wave-back svg
+    {
+        height: 50px;
+    }
+
+    .info__photo img,
+    .working-with__photo img,
+    .about-me__photo img,
+    .consultation__photo img
+    {
+        width: 290px;
+    }
+
+    .working-with__photo::after{
+        top: 12px;
+        left: 12px;
+    }
+    .consultation__photo::after{
+        left: 12px;
+        top: -12px;
+    }
+
+    .info__photo img{
+        box-shadow: 12px -12px #E6D1BF;
+    }
+
+    .about-me__photo img{
+        box-shadow: -12px 12px #E6D1BF;
+
+    }
+
+    .faq__wave-back {
+        top: -50px;
+    }
+
+    .education__header p{
+        margin-bottom: 40px;
+    }
+    .education__wave-back_bottom{
+        bottom: -50px;
+    }
+
+    .education__images img:nth-child(1){
+        width: 300px;
+    }
+    .education__images img{
+        width: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info__photo img,
+    .working-with__photo img,
+    .about-me__photo img,
+    .consultation__photo img
+    {
+        width: 250px;
+    }
+}
